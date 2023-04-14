@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94522afa2a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style/index.css">
+    <title>Talkies</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="/icons/icons8-messages-100.png" width="45px">
+                <h1>Talkies</h1>
+            </div>
+            <button onclick="show_hide()">
+                <img src="/icons/hamburger-menu-svgrepo-com.svg" width="50px">
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count">0</h4>
+                </div>
+                <div class="users-list">
+                </div>
+            </div>
+
+            <div class="chat-window">
+                <div class="chats">
+                    <!-- <div class="user-join">
+                        <p><b>Jarvis</b> Joined the chat</p>
+                    </div> -->
+                    <!-- <div class="message incoming">
+                        <h5>Jarvis</h5>
+                        <p>Hello Ultron</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Veronica</h5>
+                        <p>Welcome jarvis</p>
+                    </div> -->
+                </div>
+                <div class="user-input">
+                    <input id="user-msg" type="text" placeholder="Type your message">
+                    <button id="user-send" type="button">SEND</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        var uwindow = document.querySelector('.users-window');
+        function show_hide() {
+            if(uwindow.style.display == 'block'){
+                uwindow.style.display = 'none';
+            }
+            else{
+                uwindow.style.display = 'block';
+            }
+        }
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
